@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - RC Wound Care</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0072CE;
+            --secondary-blue: #005BAB;
+            --light-blue: #E6F3FF;
+        }
+
+        /* Header and Navigation */
+        
+ /* Header and Navigation */
+ .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px; /* Set a fixed height for the header */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+        }
+
+.logo-container img {
+    height: 80px; /* Make the logo larger */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.island-nav {
+    display: flex;
+    align-items: center;
+    height: 50px; /* Set a consistent height for the nav bar */
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.island-nav a {
+    color: var(--primary-blue);
+    padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.island-nav a:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('images/nurses.jpg') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 64px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+            margin-bottom: 2rem;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 114, 206, 0.15);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 2rem;
+        }
+
+        .advantage-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .advantage-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+    
+        /* Contact Form Styles */
+        .consultation-section {
+            background-color: #1a1a1a;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            background-color: white;
+        }
+
+        .contact-form button {
+            width: 100%;
+            background-color: var(--primary-blue); /* Use the theme blue */
+            color: white;
+            padding: 0.75rem;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--secondary-blue); /* Slightly darker blue for hover */
+        }
+
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+
+
+
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="RC Wound Care" class="h-12">
+        </div>
+        <nav class="island-nav">
+            <div class="flex space-x-6 justify-center items-center">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- Hero Section with Nurses Image -->
+    <section class="hero-section">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold mb-4">Our Products</h1>
+            <p class="text-xl">Advanced Wound Care Solutions for Better Patient Outcomes</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
+            <!-- AmnioProPlus -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h2 class="text-2xl font-bold mb-4">AmnioProPlus</h2>
+                    <p class="font-medium">Best suited for Chronic & Acute Wounds</p>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Best suited for:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Chronic Wounds (e.g., diabetic ulcers, pressure ulcers)</li>
+                            <li class="advantage-item">Acute Wounds (e.g., surgical wounds, traumatic wounds)</li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Why?</h3>
+                        <p class="text-gray-600">AmnioProPlus is an advanced biologic with a high concentration of growth factors, promoting tissue regeneration and healing. It is ideal for chronic wounds, such as diabetic ulcers or pressure ulcers, and acute wounds like surgical incisions or traumatic injuries. Its regenerative properties make it suitable for wounds anywhere on the body (arms, legs, back), where faster healing is critical.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Advantages:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Supports wound healing through angiogenesis and tissue regeneration</li>
+                            <li class="advantage-item">Excellent for use on chronic and acute wounds across various body locations</li>
+                            <li class="advantage-item">Effective in enhancing reepithelialization and tissue growth</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AmnioQuadCore -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h2 class="text-2xl font-bold mb-4">AmnioQuadCore</h2>
+                    <p class="font-medium">Best suited for Venous Ulcers & Highly Exudative Wounds</p>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Best suited for:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Venous Ulcers (legs, arms, back—anywhere with compromised circulation)</li>
+                            <li class="advantage-item">Highly Exudative Wounds (legs, arms, back)</li>
+                            <li class="advantage-item">Post-Surgical Wounds (e.g., Mohs procedures, large incisions)</li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Why?</h3>
+                        <p class="text-gray-600">AmnioQuadCore is optimal for heavily exuding wounds such as venous ulcers or post-surgical wounds. Its four-layer structure offers strong moisture management, making it highly effective in controlling exudate and maintaining a moist healing environment. It's perfect for venous ulcers on the legs or other areas where vascular compromise is present, and post-surgical wounds where infection control and enhanced healing are crucial.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Advantages:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Superior moisture absorption, perfect for wounds with high exudate</li>
+                            <li class="advantage-item">Strong barrier properties, ideal for post-surgical and venous ulcers across the body</li>
+                            <li class="advantage-item">Excellent for use in highly exudative wounds, regardless of location</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AmnioTriCore -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h2 class="text-2xl font-bold mb-4">AmnioTriCore</h2>
+                    <p class="font-medium">Best suited for Moderate-to-Low Exudating Wounds</p>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Best suited for:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Moderate-to-Low Exudating Wounds (e.g., partial-thickness burns, surgical incisions)</li>
+                            <li class="advantage-item">Moderate Surgical or Traumatic Wounds (arms, back, legs, face)</li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Why?</h3>
+                        <p class="text-gray-600">AmnioTriCore is designed for moderate wound coverage and offers flexibility for repositioning, which is particularly beneficial for wounds in areas that move frequently (like arms and joints). It's suitable for surgical wounds and partial-thickness burns on any part of the body, where a medium level of exudate management is required. Its three-layer structure ensures a good balance between wound protection and ease of use.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Advantages:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Flexible and easy to reposition for wound locations that experience movement</li>
+                            <li class="advantage-item">Ideal for moderate exudating wounds, including surgical and burn wounds</li>
+                            <li class="advantage-item">Provides effective wound coverage with moderate exudate control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AmnioCore -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h2 class="text-2xl font-bold mb-4">AmnioCore</h2>
+                    <p class="font-medium">Best suited for Lower Exudating Wounds</p>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Best suited for:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Lower Exudating Wounds (e.g., superficial wounds, minor burns, abrasions)</li>
+                            <li class="advantage-item">Surgical Incisions (anywhere on the body)</li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Why?</h3>
+                        <p class="text-gray-600">AmnioCore is designed for wounds with low exudation or superficial wounds that need minimal coverage but still benefit from biologic enhancement. It's a suitable choice for superficial surgical wounds, incisions, or abrasions across various parts of the body, providing sufficient protection while promoting healing. Its simple structure makes it easy to apply and manage in wounds that do not require extensive absorption or strength.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Advantages:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Great for managing low-exudating wounds, including surgical incisions and minor trauma</li>
+                            <li class="advantage-item">Effective for use across all body areas, offering flexible coverage</li>
+                            <li class="advantage-item">Promotes biologically enhanced healing for more superficial wound types</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AmnioCore Pro -->
+            <div class="product-card">
+                <div class="product-header">
+                    <h2 class="text-2xl font-bold mb-4">AmnioCore Pro</h2>
+                    <p class="font-medium">Best suited for Full-Thickness Wounds</p>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Best suited for:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Full-Thickness Wounds (e.g., large traumatic wounds, deeper ulcers)</li>
+                            <li class="advantage-item">Chronic Wounds with Slow Healing (e.g., pressure ulcers, diabetic ulcers)</li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Why?</h3>
+                        <p class="text-gray-600">AmnioCore Pro offers advanced biologic properties for full-thickness wounds and chronic wounds that are difficult to heal. This product is ideal for large traumatic injuries or deep ulcers, particularly those that need strong regenerative support across the body, including the back, arms, and legs. The enhanced structure of AmnioCore Pro provides superior tissue support and scaffold for cell growth, making it an excellent choice for complex or long-standing wounds.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2">Advantages:</h3>
+                        <ul class="text-gray-600">
+                            <li class="advantage-item">Advanced biologic design for full-thickness or complex wounds</li>
+                            <li class="advantage-item">Promotes faster healing and tissue regeneration in chronic wounds</li>
+                            <li class="advantage-item">Suitable for large, deep wounds across the body that require robust support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact/Consultation Section -->
+    <div class="consultation-section py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Left Column - Contact Info -->
+                <div class="text-white">
+                    <h2 class="text-4xl font-bold mb-12">Get a Personal Consultation</h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Contact -->
+                        <div class="flex items-center space-x-4">
+                            <div class="w-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Contact</h3>
+                                <p>orders@rcwoundcare.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-center space-x-4">
+                            <div class="w-8">
+                                <svg xmlns="http://<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Phone</h3>
+                                <p>786-241-8794</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column - Contact Form -->
+                <div class="bg-[#5BA69B] p-8 rounded-lg">
+                    <h2 class="text-3xl font-bold text-white mb-8">Send Us a Message</h2>
+                    <form class="contact-form">
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                        <input type="tel" placeholder="Phone" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+   <!-- Quick Links Section -->
+   <footer class="bg-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 text-gray-700">
+            <!-- About Section -->
+            <div>
+                <img src="images/logo.jpg" alt="RC WoundCare" class="h-12 mb-4">
+                <p class="text-sm leading-relaxed">
+                    RC WoundCare is a trusted distributor of premium allograft products for critical wound care cases, offering nationwide coverage to leading physicians, hospitals, and surgery centers across the United States.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="font-bold text-lg mb-4 text-gray-800">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-primary-blue">Home</a></li>
+                    <li><a href="about.html" class="hover:text-primary-blue">About</a></li>
+                    <li><a href="products.html" class="hover:text-primary-blue">Products</a></li>
+                    <li><a href="contact.html" class="hover:text-primary-blue">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Products -->
+            <div>
+                <h3 class="font-bold text-lg mb-4 text-gray-800">Products</h3>
+                <ul class="space-y-2">
+                    <li><a href="products.html" class="hover:text-primary-blue">AmnioProPlus</a></li>
+                    <li><a href="products.html" class="hover:text-primary-blue">AmnioQuadCore</a></li>
+                    <li><a href="products.html" class="hover:text-primary-blue">AmnioCore Pro</a></li>
+                    <li><a href="products.html" class="hover:text-primary-blue">AmnioTriCore</a></li>
+                    <li><a href="products.html" class="hover:text-primary-blue">AmnioCore</a></li>
+                </ul>
+            </div>
+
+
+            <!-- Contact Info -->
+            <div>
+                <h3 class="font-bold text-lg mb-4 text-gray-800">Get In Touch</h3>
+                <ul class="space-y-2">
+                    <li>Email: <a href="mailto:orders@rcwoundcare.com" class="hover:text-primary-blue">orders@rcwoundcare.com</a></li>
+                    <li>Phone: <a href="tel:7866127401" class="hover:text-primary-blue">786-612-7401</a></li>
+                    
+                </ul>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-primary-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h5v5M5 5l14 14M2 22l16-16" />
+                        </svg>
+                    </a>
+                    <a href="#" class="hover:text-primary-blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12H2M2 12h20M22 12H2m20 0H2" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

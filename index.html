@@ -17,39 +17,51 @@
         }
 
        
- /* Header and Navigation */
- .header-container {
+/* Header and Navigation */
+.header-container {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 80px; /* Set a fixed height for the header */
+    height: 80px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for a clear boundary */
-        }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 8px 0; /* Add some vertical padding */
+}
 
 .logo-container img {
-    height: 60px; /* Make the logo larger */
-    max-height: 100%;
-    width: auto; /* Maintain aspect ratio */
+    height: 100%; /* Use full height of container */
+    width: auto;
+    object-fit: contain;
+    max-height: 64px; /* 80px header height - 16px total padding */
 }
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
     .header-container {
-        height: 60px; /* Adjust header height for mobile */
-        padding: 0 0.5rem; /* Reduce padding for smaller screens */
+        height: 60px;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    .logo-container {
+        padding: 6px 0;
     }
 
     .logo-container img {
-        height: 50px; /* Resize logo for mobile */
+        max-height: 48px; /* 60px header height - 12px total padding */
     }
 }
-
 
 .island-nav {
     display: flex;

@@ -12,8 +12,8 @@
             --light-blue: #E6F3FF;
         }
 
-        /* Header and Navigation */
-        .header-container {
+ /* Header and Navigation */
+ .header-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,14 +23,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-}
+    padding: 0 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for a clear boundary */
+        }
 
 .logo-container img {
-    height: 80px; /* Make the logo larger */
+    height: 60px; /* Make the logo larger */
+    max-height: 100%;
     width: auto; /* Maintain aspect ratio */
+}
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .header-container {
+        height: 60px; /* Adjust header height for mobile */
+        padding: 0 0.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .logo-container img {
+        height: 50px; /* Resize logo for mobile */
+    }
 }
 
 .island-nav {
@@ -149,7 +161,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold mb-1">Phone</h3>
-                                <p>786-241-8794</p>
+                                <p>786-612-7401</p>
                             </div>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RC Wound Care - Advanced Wound Care Solutions</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-blue: #0072CE;
@@ -90,30 +92,56 @@
 
         /* Hero and Specialized Sections */
 
-        .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-                    url('images/doctor-lab.jpg') center/cover no-repeat;
-        padding: 8rem 0;
-        color: white;
-        position: relative;
-    }
+ /* Hero and Specialized Sections - Update these styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('images/doctor-lab.jpg') center/cover no-repeat;
+    padding: 8rem 0;
+    color: white;
+    position: relative;
+    font-family: 'Montserrat', sans-serif; /* Add this */
+}
 
-    .button-group {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-    }
+.hero-section h2 {
+    font-family: 'Playfair Display', serif; /* Add this */
+    font-size: 3.5rem; /* Increased from text-4xl */
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
 
-    .read-more-btn {
-        border: 2px solid white;
-        color: white;
-        padding: 1rem 2.5rem;
-        display: inline-block;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        font-weight: 500;
-        border-radius: 4px;
-    }
+.hero-section p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    margin-bottom: 2rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Update the button styles to match */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.read-more-btn {
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
 
     .read-more-btn:hover {
         background-color: white;
@@ -121,16 +149,17 @@
     }
 
     .contact-btn {
-        background-color: var(--primary-blue);
-        border: 2px solid var(--primary-blue);
-        color: white;
-        padding: 1rem 2.5rem;
-        display: inline-block;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        font-weight: 500;
-        border-radius: 4px;
-    }
+    background-color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+    color: white;
+    padding: 1rem 2.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
 
     .contact-btn:hover {
         background-color: var(--secondary-blue);
@@ -181,7 +210,122 @@
             text-align: center;
             margin-bottom: 40px;
         }
+/* Features Section Styles */
+/* Features Section Styles */
+.features-section {
+    padding: 8rem 0;
+    background: linear-gradient(to bottom, white, #f8fafc, white);
+    font-family: 'Montserrat', sans-serif;
+}
 
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.header .divider {
+    height: 0.25rem;
+    width: 5rem;
+    background: var(--primary-blue);
+    margin: 0 auto 1.5rem;
+}
+
+.header p {
+    font-family: 'Montserrat', sans-serif;
+    color: #4b5563;
+    max-width: 42rem;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.feature-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    border: 1px solid #f1f5f9;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 40px -12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+
+.icon-container {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.icon-container svg {
+    stroke: var(--primary-blue); /* Add this to match your brand color */
+}
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.title-underline {
+    height: 1px;
+    width: 3rem;
+    background: linear-gradient(to right, var(--primary-blue), transparent); /* Change from #3b82f6 to your brand blue */
+
+}
+
+.feature-description {
+    color: #4b5563;
+    line-height: 1.625;
+}
         /* Contact Form Styles */
         .consultation-section {
             background-color: #1a1a1a;
@@ -245,6 +389,10 @@
             }
         }
     </style>
+
+
+
+
 </head>
 <body class="bg-gray-50">
     <link rel="icon" type="image/png" href="favicon.png" sizes="192x192">
@@ -263,49 +411,104 @@
      </div>
 
     <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold mb-8">Advanced Wound Care Solutions</h2>
-                <p class="text-xl mb-8 leading-relaxed">
-                    Trusted distributor of premium allograft products for critical wound care cases,
-                    serving leading physicians and healthcare facilities nationwide.
-                </p>
-                <div class="button-group">
-                    <a href="about.html" class="read-more-btn">Learn More</a>
-                    <a href="contact.html" class="contact-btn">Contact Us</a>
+    <!-- Hero Section -->
+<div class="hero-section">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2>Advanced Wound Care Solutions</h2> <!-- Removed Tailwind classes for font -->
+            <p>
+                Trusted distributor of premium allograft products for critical wound care cases,
+                serving leading physicians and healthcare facilities nationwide.
+            </p>
+            <div class="button-group">
+                <a href="about.html" class="read-more-btn">Learn More</a>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-wrapper">
+                            <div class="icon-bg"></div>
+                            <div class="icon-container">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Strong</h3>
+                            <div class="title-underline"></div>
+                        </div>
+                    </div>
+                    <p class="feature-description">Empower your practice with cutting-edge wound care solutions designed for exceptional results.</p>
+                </div>
+    
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-wrapper">
+                            <div class="icon-bg"></div>
+                            <div class="icon-container">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 8v4l2 2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Easy-to-Use</h3>
+                            <div class="title-underline"></div>
+                        </div>
+                    </div>
+                    <p class="feature-description">Can be applied on either side, remains in place, and doesn't require sutures.</p>
+                </div>
+    
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-wrapper">
+                            <div class="icon-bg"></div>
+                            <div class="icon-container">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Flexible</h3>
+                            <div class="title-underline"></div>
+                        </div>
+                    </div>
+                    <p class="feature-description">Stores dry at room temperature with no need for refrigeration. Product remains safe and effective up to 5 years.</p>
+                </div>
+    
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="icon-wrapper">
+                            <div class="icon-bg"></div>
+                            <div class="icon-container">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="8" r="7"/>
+                                    <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="feature-title">Reimbursable</h3>
+                            <div class="title-underline"></div>
+                        </div>
+                    </div>
+                    <p class="feature-description">Favorable customer programs, overnight shipping and expert support for reimbursement.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Features Section -->
-    <div class="container mx-auto px-4 py-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="card p-8 shadow-lg">
-                <div class="text-4xl mb-6 text-[#0072CE]">💪</div>
-                <h3 class="text-xl font-bold mb-4">Strong</h3>
-                <p class="text-gray-600">Effortlessly launch your business with our complete wound care solutions.</p>
-            </div>
-
-            <div class="card p-8 shadow-lg">
-                <div class="text-4xl mb-6 text-[#0072CE]">🎯</div>
-                <h3 class="text-xl font-bold mb-4">Easy-to-Use</h3>
-                <p class="text-gray-600">Can be applied on either side, remains in place, and doesn't require sutures.</p>
-            </div>
-
-            <div class="card p-8 shadow-lg">
-                <div class="text-4xl mb-6 text-[#0072CE]">⚡</div>
-                <h3 class="text-xl font-bold mb-4">Flexible</h3>
-                <p class="text-gray-600">Stores dry at room temperature with no need for refrigeration. Product remains safe and effective up to 5 years.</p>
-            </div>
-
-            <div class="card p-8 shadow-lg">
-                <div class="text-4xl mb-6 text-[#0072CE]">💎</div>
-                <h3 class="text-xl font-bold mb-4">Reimbursable</h3>
-                <p class="text-gray-600">Favorable customer programs, overnight shipping and expert support for reimbursement.</p>
-            </div>
-        </div>
-    </div>
+        
+    </section>
 
     <!-- Specialized Section -->
 <div class="specialized-section">
@@ -442,7 +645,7 @@
     </div>
 </div>
 <!-- Safety Section with Background Image -->
-<div class="py-16 relative" style="background: url('images/doctor-working.webp') center center / cover no-repeat;">
+<div class="py-16 relative" style="background: url('images/medicine.jpg') center center / cover no-repeat;">
     <div class="container mx-auto px-4">
         <div class="bg-black bg-opacity-50 p-12 rounded-lg">
             <h2 class="text-4xl font-bold text-white mb-8">Is it Safe?</h2>
@@ -550,15 +753,6 @@
                     
                 </ul>
                 <div class="flex space-x-4 mt-4">
-                    <a href="#" class="hover:text-primary-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h5v5M5 5l14 14M2 22l16-16" />
-                        </svg>
-                    </a>
-                    <a href="#" class="hover:text-primary-blue">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12H2M2 12h20M22 12H2m20 0H2" />
-                        </svg>
                     </a>
                 </div>
             </div>
